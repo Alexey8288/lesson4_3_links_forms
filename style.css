@@ -9,12 +9,56 @@
 
 .book-list__link {
     color: red;
-
 }
 
 a {
-    /* *убирает подчеркивание */
+    /* меняет стройный в блочный */
+    display: block;
+    width: 200px;
+    color: red;
+    font-size: 15px;
+    /* *убирает нижнее подчеркивание */
     text-decoration: none;
+    /* делает отступы между элементами */
+    margin-bottom: 5px;
+    /* замедляет скорость сдвига строки */
+    transition: 0.5s;
+}
+
+a:hover {
+    color: green;
+}
+
+nav a {
+    font-size: 30px;
+    /* рисует только нижнее подчеркивание */
+    border-bottom: 7px dotted green;
+}
+
+/* подкласс для движения */
+nav a:hover {
+    color: green;
+    border-bottom-color: red;
+    /* далает отступ слева */
+    margin-left: 10px;
+}
+
+.form-test {
+    width: 300px;
+}
+
+input,
+button {
+    /* *ставить руку над кнопкой, вместо стрелочки */
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 7px red;
+}
+
+input:hover {
+    box-shadow: 0 0 7px red;
 }
 
 fieldset {
