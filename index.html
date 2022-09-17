@@ -18,6 +18,10 @@
       <a class="book-list__link" href="#sub1">Переход к разделу 1</a>
       <a class="book-list__link" href="#sub2">Переход к разделу 2</a>
       <a class="book-list__link" href="#sub3">Переход к разделу 3</a>
+          <a class="book-list__link" href="#tab1">Таблица регистрация</a>
+          <a class="book-list__link" href="#tab2">Таблица авторизация</a>
+          <a class="book-list__link" href="#tab3">Таблица описание авто</a>
+          <a class="book-list__link" href="#btn-pic">Картинка кнопка</a>
       <!-- !target="_blank" открывает ссылку в новом окне -->
       <a class="book-list__link" target="_blank" href="https://ru.wikipedia.org/wiki/CSS">Что такое CSS</a>
       <a class="book-list__link" target="_blank" href="https://ru.wikipedia.org/wiki/CSS#Правила_построения_CSS">Правила
@@ -46,11 +50,139 @@
     <a href="">javascript</a>
     <a href="">git</a>
   </nav>
+  <!-- !Номер 1 -->
+  <form action="url" method="get">
+    <fieldset>
+      <legend id="tab1">Регистрация</legend>
+      <div>
+        <label for="name">Имя</label>
+        <input id="name" type="text" name="name" placeholder="Имя">
+      </div>
+      <div>
+        <label for="surname">Фамилия</label>
+        <input id="surname" type="text" name="surname" placeholder="Фамилия">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email">
+      </div>
+      <div>
+        <label for="phone">Телефон</label>
+        <input id="phone" type="tel" name="phone" value="+38">
+      </div>
+      <div>
+        <label for="passw">Пароль</label>
+        <input id="passw" type="password" name="passw" placeholder="Пароль">
+      </div>
+      <div>
+        <label for="passw2">Подтверждение пароля</label>
+        <input id="passw2" type="password" name="passw2" placeholder="Пароль">
+      </div>
+      <br>
+      <button type="submit"><b>Отправить</b> форму</button>
+      <button type="reset"><b>Сбросить</b> форму</button>
+    </fieldset>
+  </form>
+  <!-- !Номер 2 -->
+  <form action="url" method="get">
+    <fieldset>
+      <legend id="tab2">Авторизация</legend>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Email">
+      </div>
+      <div>
+        <label for="passw">Пароль</label>
+        <input id="passw" type="password" name="passw" placeholder="Пароль">
+      </div>
+      <div>
+        <label for="save_passw">Запомнить пароль</label>
+        <input id="save_passw" type="checkbox">
+      </div>
+      <br>
+      <button type="submit"><b>Отправить</b> форму</button>
+      <button type="reset"><b>Сбросить</b> форму</button>
+    </fieldset>
+  </form>
+  <!-- !Номер 3 -->
+  <form action="url">
+    <fieldset>
+      <legend id="tab3">Описание авто</legend>
+      <div>
+        <label for="type">Тип кузова</label>
+        <select name="type" id="type">
+          <option value="sedan">Седан</option>
+          <option value="coupe">Купе</option>
+          <option value="hatchback">Хетчбек</option>
+          <option value="universal">Универсал</option>
+        </select>
+      </div>
+      <div>
+        <label for="marka">Марка авто</label>
+        <select name="marka" id="marka">
+          <option value="kia">Киа</option>
+          <option value="hyundai">Хюндаи</option>
+          <option value="audi">Ауди</option>
+          <option value="bmw">Бмв</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Тип топлива</legend>
+      <div>
+        <label for="benz">Бензин</label>
+        <input type="checkbox" id="benz">
+      </div>
+      <div>
+        <label for="dizel">Дизель</label>
+        <input type="checkbox" id="dizel">
+      </div>
+      <div>
+        <label for="gaz">Газ</label>
+        <input type="checkbox" id="gaz">
+      </div>
+      <div>
+        <label for="electro">Электро</label>
+        <input type="checkbox" id="electro">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Стоимость</legend>
+      <div>
+        <label for="priceot">Цена от</label>
+        <input type="number" id="priceot" name="priceot">
+      </div>
+      <div>
+        <label for="pricedo">Цена до</label>
+        <input type="number" id="pricedo" name="pricedo">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Год выпуска</legend>
+      <div>
+        <label for="yearot">Год от</label>
+        <input type="number" id="yearot" name="yearot">
+      </div>
+      <div>
+        <label for="yeardo">Год до</label>
+        <input type="number" id="yeardo" name="yeardo">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <button type="submit"><b>Отправить</b> форму</button>
+      <button type="reset"><b>Сбросить</b> форму</button>
+    </fieldset>
+  </form>
 
   <div class="form-test">
     <!-- !по умолчанию form в стоит method="get",при предаче пароля его будет видно в строке -->
     <!-- !для отправки пароля в нужно ставить method="post" -->
     <form action="url">
+
       <!-- !label и input лучше заворачивать в div -->
       <div>
         <label for="login">Логин</label>
@@ -66,17 +198,10 @@
         <input type="number" name="age" id="age" placeholder="Возраст">
       </div>
 
-
       <div>
         <label for="email">Почта</label>
         <input type="email" name="email" id="email" placeholder="name@gmail.com">
       </div><br>
-
-      <!-- <div>
-        <input type="radio" name="" id="">
-        <input type="radio" name="" id="">
-        <input type="radio" name="" id="">
-      </div> -->
 
       <div>
         <label for="color">Цвет</label>
@@ -104,7 +229,7 @@
       <button type="button" onclick="alert('Привет мир!')">Программируемый вид</button><br><br>
 
       <!-- !кнопка button позволяет вставить картинку, она будет кнопкой -->
-      <button>Отправить
+      <button id="btn-pic">Отправить
         <img src="img/image1.jpg" alt=""></button>
     </form>
 
@@ -152,7 +277,6 @@
     </fieldset>
   </form>
 
-
   <div>
     <h2 id="sub3">Раздел 3</h2>
     <div>
@@ -162,6 +286,7 @@
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error sit, esse dignissimos corrupti temporibus at
       labore ea laudantium nisi! Autem voluptatibus et distinctio est omnis qui nulla officia dolores aut?</p>
   </div>
+
 </body>
 
 </html>
