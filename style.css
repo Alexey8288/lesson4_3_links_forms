@@ -2,6 +2,17 @@
     box-sizing: border-box;
 }
 
+
+.book__link {}
+
+.book__image {
+    /* !время замедления трансформации */
+   transition: 0.5s;
+}
+ .book__image:hover {
+    /* !увеличение при наведении */
+        transform: scale(1.2);
+    }
 .book-list {
     display: flex;
     flex-direction: column;
